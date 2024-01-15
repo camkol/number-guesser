@@ -22,3 +22,6 @@ const updateScore = (str) => {
     computerScore += 1;
   }
 };
+const advanceRound = () => {
+  currentRoundNumber += 1;
+};
