@@ -8,7 +8,8 @@
 
 ## Notes
 
--added generateTarget() to script.js
--added compareGuesses() to script.js
--added updateScore() to script.js
--added advanceRound() to script.js
+- added generateTarget() to script.js
+- added compareGuesses() to script.js
+- added updateScore() to script.js
+- added advanceRound() to script.js
+- added getAbsoluteDistance() and modified compareGuesses() to script.js

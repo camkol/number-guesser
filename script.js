@@ -6,14 +6,19 @@ let currentRoundNumber = 1;
 const generateTarget = () => {
   return Math.floor(Math.random() * 10);
 };
+
+const getAbsoluteDistance = (a, b) => Math.abs(a - b);
+
 const compareGuesses = (user, computer, target) => {
-  if (Math.abs(user - target) == Math.abs(computer - target)) {
-    return true;
-  } else if (Math.abs(user - target) < Math.abs(computer - target)) {
-    return true;
-  } else {
-    return false;
+  if (user < 0 || user > 9) {
+    alert("Please guess a number between 0 and 9.");
+    return;
   }
+
+  const userDiff = getAbsoluteDistance(user, target);
+  const computerDiff = getAbsoluteDistance(computer, target);
+
+  return userDiff <= computerDiff;
 };
 const updateScore = (str) => {
   if (str == "human") {
